@@ -165,25 +165,27 @@ class _DayPickerState extends State<_DayPicker> {
           //       ? BoxShape.rectangle
           //       : BoxShape.circle,
           // );
-          decoration = BoxDecoration(
-              borderRadius: widget.config.dayBorderRadius,
-              shape: widget.config.dayBorderRadius != null
-                  ? BoxShape.rectangle
-                  : BoxShape.circle,
-              //color 红色
-              color: Colors.red);
+          decoration = const BoxDecoration(
+            color: Colors.red, // 选中日期的背景颜色
+            shape: BoxShape.rectangle,
+          );
         } else if (isDisabled) {
           dayColor = disabledDayColor;
         } else if (isToday) {
           // The current day gets a different text color and a circle stroke
           // border.
           dayColor = widget.config.selectedDayHighlightColor ?? todayColor;
-          decoration = BoxDecoration(
-            borderRadius: widget.config.dayBorderRadius,
-            border: Border.all(color: dayColor),
-            shape: widget.config.dayBorderRadius != null
-                ? BoxShape.rectangle
-                : BoxShape.circle,
+          // decoration = BoxDecoration(
+          //   borderRadius: widget.config.dayBorderRadius,
+          //   border: Border.all(color: dayColor),
+          //   shape: widget.config.dayBorderRadius != null
+          //       ? BoxShape.rectangle
+          //       : BoxShape.circle,
+          // );
+
+          decoration = const BoxDecoration(
+            color: Colors.blue, // 选中日期的背景颜色
+            shape: BoxShape.rectangle,
           );
         }
 
