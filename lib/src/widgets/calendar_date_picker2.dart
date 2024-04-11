@@ -327,6 +327,7 @@ class _CalendarDatePicker2State extends State<CalendarDatePicker2> {
               _maxDayPickerHeight,
           child: _buildPicker(),
         ),
+        Text('daqweqweqweqweqta'),
         // Put the mode toggle button on top so that it won't be covered up by the _CalendarView
         _DatePickerModeToggleButton(
           config: widget.config,
