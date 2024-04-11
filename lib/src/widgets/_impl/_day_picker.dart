@@ -157,14 +157,21 @@ class _DayPickerState extends State<_DayPicker> {
           // The selected day gets a circle background highlight, and a
           // contrasting text color.
           dayColor = selectedDayColor;
+          // decoration = BoxDecoration(
+          //   borderRadius: widget.config.dayBorderRadius,
+          //   color: widget.config.selectedDayHighlightColor ??
+          //       selectedDayBackground,
+          //   shape: widget.config.dayBorderRadius != null
+          //       ? BoxShape.rectangle
+          //       : BoxShape.circle,
+          // );
           decoration = BoxDecoration(
-            borderRadius: widget.config.dayBorderRadius,
-            color: widget.config.selectedDayHighlightColor ??
-                selectedDayBackground,
-            shape: widget.config.dayBorderRadius != null
-                ? BoxShape.rectangle
-                : BoxShape.circle,
-          );
+              borderRadius: widget.config.dayBorderRadius,
+              shape: widget.config.dayBorderRadius != null
+                  ? BoxShape.rectangle
+                  : BoxShape.circle,
+              //color 红色
+              color: Colors.red);
         } else if (isDisabled) {
           dayColor = disabledDayColor;
         } else if (isToday) {
